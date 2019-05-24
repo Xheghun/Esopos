@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.DashBoardFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="10dp">
+
+        <!--Main Details -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:gravity="start"
+                    android:padding="5dp"
+                    android:text="EsoposL POS &amp; Social Market Place"
+                    android:textColor="@color/colorPrimary" />
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:columnCount="1"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp">
+
+					<com.google.android.material.card.MaterialCardView
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_margin="10dp"
+						app:cardBackgroundColor="@color/colorBlue"
+						app:cardCornerRadius="6dp"
+						app:cardElevation="6dp">
+
+						<androidx.constraintlayout.widget.ConstraintLayout
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:padding="30dp">
+
+							<ImageView
+								android:id="@+id/img_1"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginStart="8dp"
+								android:layout_marginTop="8dp"
+								android:layout_marginBottom="8dp"
+								android:src="@drawable/ic_us_dollar"
+								app:layout_constraintBottom_toBottomOf="parent"
+								app:layout_constraintStart_toStartOf="parent"
+								app:layout_constraintTop_toTopOf="parent" />
+
+							<TextView
+								android:id="@+id/text_price"
+								android:layout_width="0dp"
+								android:layout_height="wrap_content"
+								android:layout_marginStart="8dp"
+								android:layout_marginTop="24dp"
+								android:layout_marginEnd="8dp"
+								android:layout_toEndOf="@id/img_1"
+								android:fontFamily="@font/open_sans_semi_bold"
+								android:text="$0.00"
+								android:textColor="#fff"
+								android:textSize="22sp"
+								app:layout_constraintEnd_toEndOf="parent"
+								app:layout_constraintStart_toEndOf="@+id/img_1"
+								app:layout_constraintTop_toTopOf="parent" />
+
+							<TextView
+								android:id="@+id/textView"
+								android:layout_width="0dp"
+								android:layout_height="wrap_content"
+								android:layout_marginStart="8dp"
+								android:layout_marginTop="8dp"
+								android:layout_marginEnd="8dp"
+								android:fontFamily="@font/open_sans_semi_bold"
+								android:text="SALES TODAY"
+								android:textColor="#fff"
+								android:textSize="18sp"
+								app:layout_constraintEnd_toEndOf="parent"
+								app:layout_constraintHorizontal_bias="0.0"
+								app:layout_constraintStart_toEndOf="@+id/img_1"
+								app:layout_constraintTop_toBottomOf="@+id/text_price" />
+						</androidx.constraintlayout.widget.ConstraintLayout>
+					</com.google.android.material.card.MaterialCardView>
+
+					<com.google.android.material.card.MaterialCardView
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_margin="10dp"
+						app:cardBackgroundColor="@color/colorPrimary"
+						app:cardCornerRadius="6dp"
+						app:cardElevation="6dp">
+
+						<androidx.constraintlayout.widget.ConstraintLayout
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:padding="30dp">
+
+							<ImageView
+								android:id="@+id/img_2"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginStart="8dp"
+								android:layout_marginTop="8dp"
+								android:layout_marginBottom="8dp"
+								android:src="@drawable/ic_add_circle_white_large"
+								app:layout_constraintBottom_toBottomOf="parent"
+								app:layout_constraintStart_toStartOf="parent"
+								app:layout_constraintTop_toTopOf="parent" />
+
+							<TextView
+								android:id="@+id/text_price2"
+								android:layout_width="0dp"
+								android:layout_height="wrap_content"
+								android:layout_marginStart="8dp"
+								android:layout_marginTop="24dp"
+								android:layout_marginEnd="8dp"
+								android:fontFamily="@font/open_sans_semi_bold"
+								android:text="$0.00"
+								android:textColor="#fff"
+								android:textSize="22sp"
+								app:layout_constraintEnd_toEndOf="parent"
+								app:layout_constraintStart_toEndOf="@+id/img_2"
+								app:layout_constraintTop_toTopOf="parent" />
+
+							<TextView
+								android:id="@+id/textView2"
+								android:layout_width="0dp"
+								android:layout_height="wrap_content"
+								android:layout_below="@id/text_price2"
+								android:layout_marginStart="8dp"
+								android:layout_marginTop="8dp"
+								android:layout_marginEnd="8dp"
+								android:fontFamily="@font/open_sans_semi_bold"
+								android:text="PROFIT TODAY"
+								android:textColor="#fff"
+								android:textSize="18sp"
+								app:layout_constraintEnd_toEndOf="parent"
+								app:layout_constraintStart_toEndOf="@+id/img_2"
+								app:layout_constraintTop_toBottomOf="@+id/text_price2" />
+						</androidx.constraintlayout.widget.ConstraintLayout>
+					</com.google.android.material.card.MaterialCardView>
+
+					<com.google.android.material.card.MaterialCardView
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_margin="10dp"
+						app:cardBackgroundColor="@color/colorDark"
+						app:cardCornerRadius="6dp"
+						app:cardElevation="6dp">
+
+						<androidx.constraintlayout.widget.ConstraintLayout
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:padding="30dp">
+
+							<ImageView
+								android:id="@+id/imageView"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginStart="8dp"
+								android:layout_marginTop="8dp"
+								android:src="@drawable/ic_minus"
+								app:layout_constraintStart_toStartOf="parent"
+								app:layout_constraintTop_toTopOf="parent" />
+
+							<TextView
+								android:id="@+id/text_price3"
+								android:layout_width="0dp"
+								android:layout_height="wrap_content"
+								android:layout_marginStart="8dp"
+								android:layout_marginTop="24dp"
+								android:layout_marginEnd="8dp"
+								android:fontFamily="@font/open_sans_semi_bold"
+								android:text="$0.00"
+								android:textColor="#fff"
+								android:textSize="22sp"
+								app:layout_constraintEnd_toEndOf="parent"
+								app:layout_constraintStart_toEndOf="@+id/imageView"
+								app:layout_constraintTop_toTopOf="parent" />
+
+							<TextView
+								android:id="@+id/textView3"
+								android:layout_width="0dp"
+								android:layout_height="wrap_content"
+								android:layout_marginStart="8dp"
+								android:layout_marginTop="8dp"
+								android:layout_marginEnd="8dp"
+								android:layout_marginBottom="8dp"
+								android:fontFamily="@font/open_sans_semi_bold"
+								android:text="EXPENSE TODAY"
+								android:textColor="#fff"
+								android:textSize="18sp"
+								app:layout_constraintBottom_toBottomOf="parent"
+								app:layout_constraintEnd_toEndOf="parent"
+								app:layout_constraintStart_toEndOf="@+id/imageView"
+								app:layout_constraintTop_toBottomOf="@+id/text_price3" />
+						</androidx.constraintlayout.widget.ConstraintLayout>
+					</com.google.android.material.card.MaterialCardView>
+
+					<com.google.android.material.card.MaterialCardView
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_margin="10dp"
+						app:cardBackgroundColor="@color/colorBlue"
+						app:cardCornerRadius="6dp"
+						app:cardElevation="6dp">
+
+						<androidx.constraintlayout.widget.ConstraintLayout
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:padding="30dp">
+
+							<ImageView
+								android:id="@+id/imageView2"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginStart="8dp"
+								android:layout_marginTop="8dp"
+								android:src="@drawable/ic_grid"
+								app:layout_constraintStart_toStartOf="parent"
+								app:layout_constraintTop_toTopOf="parent" />
+
+							<TextView
+								android:id="@+id/text_price4"
+								android:layout_width="0dp"
+								android:layout_height="wrap_content"
+								android:layout_marginStart="8dp"
+								android:layout_marginTop="24dp"
+								android:layout_marginEnd="8dp"
+								android:fontFamily="@font/open_sans_semi_bold"
+								android:text="$0.00"
+								android:textColor="#fff"
+								android:textSize="22sp"
+								app:layout_constraintEnd_toEndOf="parent"
+								app:layout_constraintStart_toEndOf="@+id/imageView2"
+								app:layout_constraintTop_toTopOf="parent" />
+
+							<TextView
+								android:id="@+id/textView4"
+								android:layout_width="0dp"
+								android:layout_height="wrap_content"
+								android:layout_marginStart="8dp"
+								android:layout_marginTop="8dp"
+								android:layout_marginEnd="8dp"
+								android:layout_marginBottom="8dp"
+								android:fontFamily="@font/open_sans_semi_bold"
+								android:text="PRODUCT"
+								android:textColor="#fff"
+								android:textSize="18sp"
+								app:layout_constraintBottom_toBottomOf="parent"
+								app:layout_constraintEnd_toEndOf="parent"
+								app:layout_constraintStart_toEndOf="@+id/imageView2"
+								app:layout_constraintTop_toBottomOf="@+id/text_price4" />
+						</androidx.constraintlayout.widget.ConstraintLayout>
+					</com.google.android.material.card.MaterialCardView>
+                </GridLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!--Monthly Statistic -->
+        <TextView
+            android:id="@+id/title_1"
+            style="@style/card_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_1"
+            android:layout_marginStart="10dp"
+            android:drawableStart="@drawable/ic_view_details"
+            android:text="This Month Statistic" />
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_2"
+            style="@style/table_card_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_1"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/card_1"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="#fff"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="1"
+                    android:rowCount="10">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:text="Number of Sales" />
+
+                        <TextView
+                            style="@style/blue_circle"
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="0" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="25dp"
+                            android:layout_weight="2"
+                            android:drawableEnd="@drawable/ic_line_chart" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorTextField"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:text="Total Sales" />
+
+                        <TextView
+                            style="@style/blue_circle"
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="$" />
+
+                        <TextView
+                            style="@style/view_details_text"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="@string/view_details" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:text="Sales Profit" />
+
+                        <TextView
+                            style="@style/blue_circle"
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="$" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="25dp"
+                            android:layout_weight="2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorTextField"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:text="Number of Expenses" />
+
+                        <TextView
+                            style="@style/green_circle"
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/num_expenses_btn"
+                            style="@style/view_details_text"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="@string/view_details"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:text="Total Expenses" />
+
+                        <TextView
+                            style="@style/green_circle"
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="0" />
+
+                        <TextView
+                            style="@style/view_details_text"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="@string/view_details" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorTextField"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:text="Number of Products" />
+
+                        <TextView
+                            style="@style/blue_circle"
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="0" />
+
+                        <TextView
+                            style="@style/view_details_text"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="@string/view_details" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:text="Number of Service" />
+
+                        <TextView
+                            style="@style/blue_circle"
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="0" />
+
+                        <TextView
+                            style="@style/view_details_text"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="@string/view_details" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorTextField"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:text="In Stock Inventory Quantity" />
+
+                        <TextView
+                            style="@style/blue_circle"
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="0" />
+
+                        <TextView
+                            style="@style/view_details_text"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="@string/view_details" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:text="Product Out of Stock" />
+
+                        <TextView
+                            style="@style/orange_circle"
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="0" />
+
+                        <TextView
+                            style="@style/view_details_text"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="@string/view_details" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorTextField"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:text="Number of Expired Product" />
+
+                        <TextView
+                            style="@style/blue_circle"
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="0" />
+
+                        <TextView
+                            style="@style/view_details_text"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="@string/view_details" />
+                    </LinearLayout>
+                </GridLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!--Latest Sales -->
+        <TextView
+            android:id="@+id/title_2"
+            style="@style/card_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_2"
+            android:text="@string/latest_sales" />
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_3"
+            style="@style/table_card_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_2"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="1"
+                    android:rowCount="3">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/open_sans_bold"
+                            android:text="Date" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:fontFamily="@font/open_sans_bold"
+                            android:text="Grand Total" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="14/16/2018" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="$200,000" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="14/16/2018" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="$200,000" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="14/16/2018" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="$200,000" />
+                    </LinearLayout>
+                </GridLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!--Latest Expenses -->
+        <TextView
+            android:id="@+id/title_3"
+            style="@style/card_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_3"
+            android:text="Latest Expenses" />
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_4"
+            style="@style/table_card_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_3"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/open_sans_bold"
+                            android:text="Category" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/open_sans_bold"
+                            android:text="Date" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/open_sans_bold"
+                            android:text="Amount" />
+                    </LinearLayout>
+                </GridLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!--Latest Product -->
+        <TextView
+            android:id="@+id/title_4"
+            style="@style/card_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_4"
+            android:text="Latest Products" />
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_5"
+            style="@style/table_card_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_4"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/open_sans_bold"
+                            android:text="User Name" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/open_sans_bold"
+                            android:text="Category" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/open_sans_bold"
+                            android:text="Price" />
+                    </LinearLayout>
+                </GridLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

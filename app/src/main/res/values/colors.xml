@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E0115F</color>
+    <color name="colorPrimaryDark">#333333</color>
+    <color name="colorBlackTrans">#80000000</color>
+    <color name="colorAccent">@color/colorPrimary</color>
+    <color name="colorPrimaryTrans">#80E0115F</color>
+    <color name="colorTextSecondary">#888888</color>
+    <color name="colorLoginText">#CBBC94</color>
+    <color name="colorTextField">#EEEEEE</color>
+    <color name="colorTextFieldSecondary">#E0E0E0</color>
+    <color name="colorBlue">#34AADC</color>
+    <color name="colorDark">#1A2732</color>
+    <color name="colorOrange">#FCB322</color>
+    <color name="colorGreen">#4CD964</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorGrey">#BDBDBD</color>
+</resources>

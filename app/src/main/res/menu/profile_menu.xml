@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+	<item android:title="connect with store and send message"
+		android:id="@+id/connect_and_sned"/>
+	<item android:title="Calculator"
+		android:id="@+id/calculator_ac"
+		android:icon="@drawable/ic_calculator"
+		app:showAsAction="ifRoom"/>
+
+</menu>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item android:title="Dashboard"
+            android:id="@+id/drawer_dashboard"
+            android:icon="@drawable/ic_dashboard"/>
+        <item android:title="Sales Register">
+        <menu>
+            <item android:title="Online POS"
+                android:id="@+id/drawer_online_pos"
+                android:icon="@drawable/ic_expense"/>
+            <item android:title="All Sales"
+                android:id="@+id/drawer_all_sales"
+                android:icon="@drawable/ic_menu"/>
+        </menu>
+    </item>
+        <item android:title="Customer"
+            android:icon="@drawable/ic_customer"
+            android:id="@+id/drawer_customer"/>
+        <item android:title="Offline Sales">
+            <menu>
+                <item android:title="Offline POS"
+                    android:id="@+id/drawer_offline_pos"
+                    android:icon="@drawable/ic_offline"/>
+                <item android:title="Offline Settings"
+                    android:id="@+id/drawer_offline_settings"
+                    android:icon="@drawable/ic_offline"/>
+                <item android:title="Offline POS"
+                    android:id="@+id/drawer_offline_sales"
+                    android:icon="@drawable/ic_offline"/>
+                <item android:title="Offline Help"
+                    android:id="@+id/drawer_offline_help"
+                    android:icon="@drawable/ic_offline"/>
+            </menu>
+        </item>
+        <item android:title="@null">
+            <menu>
+            <item android:title="Supplier"
+                android:icon="@drawable/ic_supplier"
+                android:id="@+id/drawer_supplier"/>
+            <item android:title="Product/Service"
+                android:id="@+id/drawer_product_service"
+                android:icon="@drawable/ic_grid"/>
+            <item android:title="Staff"
+                android:id="@+id/drawer_staff"
+                android:icon="@drawable/ic_staff_card"/>
+        </menu></item>
+        <item android:title="Reporting">
+            <menu>
+                <item android:title="Generate Report"
+                    android:icon="@drawable/ic_box"
+                    android:id="@+id/drawer_generate_report"/>
+            </menu>
+        </item>
+        <item android:title="Store Timeline"
+            android:id="@+id/store_timeline"
+            android:icon="@drawable/ic_past"/>
+    </group>
+</menu>
