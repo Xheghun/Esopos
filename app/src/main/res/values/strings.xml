@@ -119,6 +119,7 @@
 	<string name="gender">Gender:</string>
 	<string name="age">Age</string>
 	<string name="firstname">Firstname</string>
+	<string name="records_per_page">Records per Page</string>
 
 	<string-array name="gender">
 		<item>male</item>

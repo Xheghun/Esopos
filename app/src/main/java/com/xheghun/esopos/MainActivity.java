@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.widget.ExpandableListView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -19,6 +18,7 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.material.navigation.NavigationView;
 import com.xheghun.esopos.adapter.ExpandableListAdapter;
+import com.xheghun.esopos.fragments.AllSalesFragment;
 import com.xheghun.esopos.fragments.DashBoardFragment;
 import com.xheghun.esopos.fragments.OfflineHelpFragment;
 import com.xheghun.esopos.fragments.OfflinePOSFragment;
@@ -114,18 +114,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 	private void prepareMenuData() {
 
 		//Dashboard. No sub menus
-		menuModel = new MenuModel("Dashboard", false, false, new DashBoardFragment(),
+		MenuModel menuModel = new MenuModel("Dashboard", true, false, new DashBoardFragment(),
 				mGetDrawable(R.drawable.ic_dashboard), 0);
 		headerList.add(menuModel);
 
-		if (!menuModel.hasChildren) {
+		if (menuModel.hasChildren) {
 			childList.put(menuModel, null);
 		}
 
 		loadSalesRegister();
 
 
-		menuModel = new MenuModel("Customer", false, false, null,
+		menuModel = new MenuModel("Customer", true, false, null,
 				mGetDrawable(R.drawable.ic_customer), 0);
 		headerList.add(menuModel);
 
@@ -135,7 +135,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 		loadOfflineSales();
 
-		menuModel = new MenuModel("Supplier", false, false, null,
+		menuModel = new MenuModel("Supplier", true, false, null,
 				mGetDrawable(R.drawable.ic_supplier), 0);
 		headerList.add(menuModel);
 
@@ -149,7 +149,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 		loadExpenses();
 
-		menuModel = new MenuModel("Store Timeline", false, false, new StoreTimelineFragment(),
+		menuModel = new MenuModel("Store Timeline", true, false, new StoreTimelineFragment(),
 				mGetDrawable(R.drawable.ic_past), 0);
 		headerList.add(menuModel);
 
@@ -157,7 +157,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 			childList.put(menuModel, null);
 		}
 
-		menuModel = new MenuModel("Market Place", false, false, null,
+		menuModel = new MenuModel("Market Place", true, false, null,
 				mGetDrawable(R.drawable.ic_basketball), 0);
 		headerList.add(menuModel);
 
@@ -165,7 +165,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 			childList.put(menuModel, null);
 		}
 
-		menuModel = new MenuModel("Help", false, false, null,
+		menuModel = new MenuModel("Help", true, false, null,
 				mGetDrawable(R.drawable.ic_help), 0);
 		headerList.add(menuModel);
 
@@ -174,7 +174,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 		}
 
 
-		menuModel = new MenuModel("Settings", false, false, null,
+		menuModel = new MenuModel("Settings", true, false, null,
 				mGetDrawable(R.drawable.ic_settings), 0);
 		headerList.add(menuModel);
 
@@ -182,7 +182,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 			childList.put(menuModel, null);
 		}
 
-		menuModel = new MenuModel("Log Out", false, false, null,
+		menuModel = new MenuModel("Log Out", true, false, null,
 				mGetDrawable(R.drawable.ic_logout), 0);
 		headerList.add(menuModel);
 
@@ -294,7 +294,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 				mGetDrawable(R.drawable.ic_expense), 0);
 		childModelsList.add(childModel);
 
-		childModel = new MenuModel("All Sales", false, false, null,
+		childModel = new MenuModel("All Sales", false, false, new AllSalesFragment(),
 				mGetDrawable(R.drawable.ic_expense), 0);
 		childModelsList.add(childModel);
 
@@ -349,14 +349,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 		expandableListView.setAdapter(expandableListAdapter);
 
 		expandableListView.setOnGroupClickListener((parent, v, groupPosition, id) -> {
-
-			if (headerList.get(groupPosition).isGroup) {
-				if (!headerList.get(groupPosition).hasChildren) {
-					Toast.makeText(MainActivity.this, "Holla", Toast.LENGTH_SHORT).show();
+			MenuModel menuModel = headerList.get(groupPosition);
+			if (menuModel.hasChildren && menuModel.fragment != null) {
+				loadFragment(menuModel.fragment);
 					onBackPressed();
 				}
-			}
-
 			return false;
 		});
 

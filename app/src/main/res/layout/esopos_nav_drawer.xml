@@ -10,19 +10,21 @@
     tools:openDrawer="start">
     <include layout="@layout/activity_main" />
     <com.google.android.material.navigation.NavigationView
+		app:headerLayout="@layout/nav_header"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:id="@+id/esopos_nav_view"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-		app:headerLayout="@layout/nav_header">
+		app:itemBackground="@color/colorPrimary">
 
 		<ExpandableListView
 			android:id="@+id/expandableListView"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:layout_gravity="start"
-			android:childDivider="@color/colorTextSecondary"
-			android:dividerHeight="0.5dp" />
+			android:layout_marginTop="@dimen/nav_header_height"
+			android:background="@color/colorPrimary"
+			android:dividerHeight="1dp"
+			android:groupIndicator="@null" />
 	</com.google.android.material.navigation.NavigationView>
 </androidx.drawerlayout.widget.DrawerLayout>

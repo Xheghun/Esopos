@@ -1,6 +1,7 @@
 package com.xheghun.esopos.adapter;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,9 +14,6 @@ import com.xheghun.esopos.model.MenuModel;
 import java.util.HashMap;
 import java.util.List;
 
-/**
- * Created by anupamchugh on 22/12/17.
- */
 
 
 public class ExpandableListAdapter extends BaseExpandableListAdapter {
@@ -45,7 +43,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 	public View getChildView(int groupPosition, final int childPosition,
 							 boolean isLastChild, View convertView, ViewGroup parent) {
 
-		MenuModel child = getChild(groupPosition, childPosition);
+		MenuModel gChild = getChild(groupPosition, childPosition);
 
 		if (convertView == null) {
 			LayoutInflater infalInflater = (LayoutInflater) this.context
@@ -56,10 +54,8 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 		TextView txtListChild = convertView
 				.findViewById(R.id.lblListItem);
 
-		txtListChild.setText(child.menuName);
-		txtListChild.setCompoundDrawablePadding(10)
-		;
-		txtListChild.setCompoundDrawablesWithIntrinsicBounds(child.drawableStart, 0, 0, 0);
+		txtListChild.setText(gChild.menuName);
+		txtListChild.setCompoundDrawablesWithIntrinsicBounds(gChild.drawableStart, 0, 0, 0);
 		return convertView;
 	}
 
@@ -89,7 +85,6 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 		return groupPosition;
 	}
 
-
 	@Override
 	public View getGroupView(int groupPosition, boolean isExpanded,
 							 View convertView, ViewGroup parent) {
@@ -101,14 +96,14 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 		}
 
 		TextView lblListHeader = convertView.findViewById(R.id.list_group_header);
-		//lblListHeader.setTypeface(null, Typeface.BOLD);
+		lblListHeader.setTypeface(null, Typeface.BOLD);
 		lblListHeader.setText(header.menuName);
-		lblListHeader.setCompoundDrawablePadding(10);
 
-		if (isExpanded && header.hasChildren)
+		if (isExpanded && header.isGroup)
 			lblListHeader.setCompoundDrawablesWithIntrinsicBounds(header.drawableStart, 0, R.drawable.ic_keyboard_arrow_down, 0);
 		else
 			lblListHeader.setCompoundDrawablesWithIntrinsicBounds(header.drawableStart, 0, header.drawableEnd, 0);
+
 		return convertView;
 	}
 
@@ -122,3 +117,4 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 		return true;
 	}
 }
+
